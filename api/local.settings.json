@@ -1,7 +1,8 @@
 {
   "IsEncrypted": false,
   "Values": {
-    "FUNCTIONS_WORKER_RUNTIME": "dotnet-isolated"
+    "FUNCTIONS_WORKER_RUNTIME": "dotnet-isolated",
+    "MY_SETTINS": "test"
   },
   "Host": {
     "LocalHttpPort": 7071,

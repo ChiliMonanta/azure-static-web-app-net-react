@@ -18,7 +18,7 @@ export const FetchData = () => {
 
     const populateWeatherData = async () => {
         console.log("get weather...")
-        const response = await fetch('http://localhost:7071/api/WeatherForecast');
+        const response = await fetch(`${process.env.REACT_APP_BACKEND_BASE_URI}/WeatherForecast`);
         const data = await response.json();
         setWeatherData({ forecasts: data, loading: false });
     }

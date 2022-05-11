@@ -48,7 +48,6 @@ Not supported:
 On each PR a new staging environment is created on your Static Web App. If you browse to your Static Web App in the Azure portal you find the staging uri for your PR. When the PR is closed the staging environment (for your PR) is removed. Then the main branch is deployd automatically on the production environment.
 
 ## How to Run locally in vscode:
-------------
 ```
 Select SWA: Run app
 press F5
@@ -79,7 +78,6 @@ swa start ./app/build/ --api-location ./api
 ```
 
 ## Prerequisite
-------------
 ```
 npm install -g azure-functions-core-tools@4 --unsafe-perm true
 npm install -g @azure/static-web-apps-cli

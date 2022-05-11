@@ -93,3 +93,4 @@ https://react-bootstrap.github.io
 ```
 
 az staticwebapp appsettings set
+https://docs.microsoft.com/en-us/azure/static-web-apps/application-settings

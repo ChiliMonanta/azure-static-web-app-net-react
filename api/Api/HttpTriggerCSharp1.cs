@@ -52,7 +52,7 @@ public class HttpTrigger
     {
         log.LogInformation("C# HTTP trigger function processed a request.");
 
-        var settings = Environment.GetEnvironmentVariable("MY_SETTINGS");
+        var settings = Environment.GetEnvironmentVariable("MY_SETTINGS") ?? "NULL";
         var response = req.CreateResponse(HttpStatusCode.OK);
         response.WriteString(settings);
 

@@ -43,6 +43,9 @@ At this time the only option is to deploy with github actions, see .github/workf
 Not supported:
 * Deploy with vscode (works if you link static app to github, this is not done in this example)
 * Deploy with az cli
+* Settings have to be pushed manually with CLI or added in the portal.
+See https://docs.microsoft.com/en-us/azure/static-web-apps/application-settings.
+`az staticwebapp appsettings set --name StaticWebAppNetReact --setting-names "message=Hello world"`
 
 ### How it works
 On each PR a new staging environment is created on your Static Web App. If you browse to your Static Web App in the Azure portal you find the staging uri for your PR. When the PR is closed the staging environment (for your PR) is removed. Then the main branch is deployd automatically on the production environment.
@@ -91,6 +94,3 @@ https://docs.microsoft.com/en-us/azure/static-web-apps/overview
 https://useiconic.com/open
 https://react-bootstrap.github.io
 ```
-
-az staticwebapp appsettings set
-https://docs.microsoft.com/en-us/azure/static-web-apps/application-settings

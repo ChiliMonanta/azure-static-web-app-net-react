@@ -5,7 +5,6 @@ using Microsoft.Azure.Functions.Worker.Http;
 using Microsoft.Azure.Functions.Worker;
 using System.Net;
 using System.Text.Json;
-using System;
 
 namespace StaticWebApp.Api;
 
@@ -42,19 +41,6 @@ public class HttpTrigger
 
         var response = req.CreateResponse(HttpStatusCode.OK);
         response.WriteString(responseMessage);
-
-        return response;
-    }
-
-    [Function("HttpTrigger2")]
-    public async Task<HttpResponseData> EnvTest(
-    [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "trigger2")] HttpRequestData req)
-    {
-        log.LogInformation("C# HTTP trigger function processed a request.");
-
-        var settings = Environment.GetEnvironmentVariable("MY_SETTINGS") ?? "NULL";
-        var response = req.CreateResponse(HttpStatusCode.OK);
-        response.WriteString(settings);
 
         return response;
     }

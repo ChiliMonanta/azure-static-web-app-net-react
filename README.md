@@ -1,7 +1,14 @@
-# Static Web App with Net6.0 and React
+# Static Web App with Net6.0 and TypeScript
 
-This is an example of a single page application, all hosted in a single [Azure Static Web Apps](https://docs.microsoft.com/en-us/azure/static-web-apps/). The backend is written in C# and the frontend is written in React/Typescript. The infrastructure is created with [Bicep](https://docs.microsoft.com/en-us/azure/azure-resource-manager/bicep/). The deployments use staging environments and is done with Github actions. This example is influenced the tutorial: https://docs.microsoft.com/en-us/azure/static-web-apps/deploy-blazor.
+This is an example of a single page application, all hosted in a single [Azure Static Web Apps](https://docs.microsoft.com/en-us/azure/static-web-apps/). The backend is written in C# and the frontend is written in React/TypeScript. The infrastructure is created with [Bicep](https://docs.microsoft.com/en-us/azure/azure-resource-manager/bicep/). The deployments use staging environments and is done with Github actions. This example is influenced the tutorial: https://docs.microsoft.com/en-us/azure/static-web-apps/deploy-blazor.
 
+Static Web Apps can can be written in many different languages.
+Here are some examples:
+| Frontend | Backend | Repo |
+|------------|---------|-----|
+| TypeScript + React | TypeScript | [Ts + Ts](https://github.com/ChiliMonanta/azure-static-web-app-react-react)|
+| TypeScript + React | C# | [C# + Ts](https://github.com/ChiliMonanta/azure-static-web-app-net-react)|
+| C# + html | C# | [WebAssembly](https://github.com/ChiliMonanta/azure-static-web-app-net-webassembly)|
 
 ## Folder structure
 

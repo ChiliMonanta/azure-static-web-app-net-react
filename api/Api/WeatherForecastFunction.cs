@@ -10,25 +10,13 @@ namespace StaticWebApp.Api;
 
 public static class WeatherForecastFunction
 {
-    private static string GetSummary(int temp)
+    private static string GetSummary(int temp) => temp switch
     {
-        var summary = "Mild";
-
-        if (temp >= 32)
-        {
-            summary = "Hot";
-        }
-        else if (temp <= 16 && temp > 0)
-        {
-            summary = "Cold";
-        }
-        else if (temp <= 0)
-        {
-            summary = "Freezing";
-        }
-
-        return summary;
-    }
+        >= 32 => "Hot",
+        > 0 and <= 16 => "Cold",
+        <= 0 => "Freezing",
+        _ => "Mild"
+    };
 
     [Function("WeatherForecast")]
     public static HttpResponseData Run(
